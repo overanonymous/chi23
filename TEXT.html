@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://fonts.googleapis.com/css?family=Times+New+Roman&display=swap"
+    rel="stylesheet"
+  />
+  <link href="main.css" rel="stylesheet" />
+    <title>ND Experiment</title>
+  </head>
+  <style>
+    .slides {
+      display: none;
+    }
+    .questions {
+        display:none;
+    }
+  </style>
+  <body>
+    <!--https://nd-hci.github.io/FINS_Narratives/TEXT.html-->
+    <form
+    id="my-form"
+    action="https://script.google.com/macros/s/AKfycbyxsu9ivBwSYrfQ1ATKjsaLr_Ub-NGp63H9SSUlQXLKkihjhC2VeKmBJpeSm5sa5uTeEg/exec"
+    method="POST">
+    
+    <!--Remember to change workerid to type=number when we actually begin the mTurk-->
+
+    <!--Welcome Page-->
+    <div class="slides">
+      <iframe src="instructions/welcome.html"
+      class="healthrate_format" frameborder="0" scrolling="no"></iframe>
+      <div class="questions"style="left:1025px; top:300px; height:300px; width: 280px">
+        <p class = "balanced_diet_format" style="text-align:center;">Worker ID:</p>
+      </div>
+      <div class = "input_box" style="left: 1090px; top: 360px;">
+        <input class="input" name="WorkerID" id="WorkerID" type="text" required>
+        <input class="next" type="button" onclick="start(0); plusDivs(document.getElementById('WorkerID').value); " value="Next ❯">
+      </div>
+    </div>
+  </div>
+  
+    <!--HEALTHRATE-->
+    <!-- https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
+    <!-- INSTRUCTION PAGE -->
+    <div class="slides">
+        <iframe src="instructions/HEALTHRATE.html" class="instructions" frameborder="0"></iframe>
+        <div class="questions">
+          <input class="next" type="button" onclick="plusDivsNoAnswer(1)" value="Next ❯">
+      </div>
+    </div>
+
+
+    <!--Potpie: Control-->
+    <div class="slides">
+      <iframe src="healthrate/potpie_healthrate/index.html"
+      class="healthrate_format" frameborder="0" scrolling="no"></iframe>
+      <div class="questions"style="left:970px; top:270px; height:300px; width: 400px">
+        <!--<p class = "balanced_diet_format">
+        Enter Answer Here:
+        </p>-->
+      </div>
+      <div class="input_box" style="top:260px; left:900px;">
+        <label for="HR_PPInitial" style="top:-30px; position: absolute;"><b>Select One:</b></label>
+        <select name="HR_PPInitial" id="HR_PPInitial" class="w3-select">
+          <option value="">----</option>
+          <option value="1"><strong>1: Not Healthy</strong></option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10"> <strong>10: Very Healthy</strong></option>
+        </select>
+        <input class="next" type="button" style="top:180px; left:45px; position:absolute;"onclick="plusDivsNumber(document.getElementById('HR_PPInitial').value)" value="Next ❯">
+      </div> 
+    </div>
+
+    <div class="slides">
+        <iframe src="control/PPText-C.html" 
+        class="control" frameborder="0" scrolling="no" onmouseout="getOutC()" onmouseenter="getIn()"></iframe>
+        <div class = "viz_instructions" style="left:995px; top:175px; height:300px; width: 350px; text-align:center;">
+          <i>Answer the following question based on the nutrition label and narrative. </i>
+        </div>
+        
+        <div class="questions"style="left:1025px; top:300px; height:300px; width: 350px">
+          <p class = "balanced_diet_format">
+            Rank the food product on the scale 1-10:
+          </p>
+        
+        <div class="input_box" style="top:100px; left:80px;">
+          <label for="HR_PPAfter" style="top:-20px; position: absolute;"><b>Select One:</b></label>
+          <select name="HR_PPAfter" id="HR_PPAfter" class="w3-select">
+            <option value="">----</option>
+            <option value="1"><strong>1: Not Healthy</strong></option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10"> <strong>10: Very Healthy</strong></option>
+          </select>
+          <input class="next" type="button" style="top:180px; left:45px; position:absolute;"onclick="plusDivsNumber(document.getElementById('HR_PPAfter').value)" value="Next ❯">
+        </div> 
+      </div>
+    </div>
+
+
+    <!--Canned Soup Magazine-->
+    <div class="slides">
+      <iframe src="healthrate/cannedsoup_healthrate/index.html"
+      class="healthrate_format" frameborder="0" scrolling="no"></iframe>
+      <div class="questions"style="left:970px; top:270px; height:300px; width: 400px">
+      </div>
+      <div class="input_box" style="top:260px; left:900px;">
+        <label for="HR_CSInitial" style="top:-30px; position: absolute;"><b>Select One:</b></label>
+        <select name="HR_CSInitial" id="HR_CSInitial" class="w3-select">
+          <option value="">----</option>
+          <option value="1"><strong>1: Not Healthy</strong></option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10"> <strong>10: Very Healthy</strong></option>
+        </select>
+        <input class="next" type="button" style="top:180px; left:45px; position:absolute;"onclick="plusDivsNumber(document.getElementById('HR_CSInitial').value)" value="Next ❯">
+    </div>
+    </div>
+
+
+    <div class="slides">
+
+        <iframe src="magazine/CSText-M.html" 
+        class="magazine" frameborder="0" onmouseout="getOutM()" onmouseenter="getIn()"></iframe>
+        <div class = "viz_instructions" style="left:995px; top:150px; height:300px; width: 350px; text-align:center;">
+          <i>Answer the following question based on the nutrition label and narrative. 
+            <p> Use the vertical scrollbar to view further sections of the label.</p>
+          </i>
+        </div>   
+        <div class="questions"style="left:1025px; top:300px; height:300px; width: 350px">
+          <p class = "balanced_diet_format">
+            Rank the food product on the scale 1-10:
+          </p>
+          <div class="input_box" style="top:100px; left:80px;">
+            <label for="HR_CSAfter" style="top:-20px; position: absolute;"><b>Select One:</b></label>
+            <select name="HR_CSAfter" id="HR_CSAfter" class="w3-select">
+              <option value="">----</option>
+              <option value="1"><strong>1: Not Healthy</strong></option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10"> <strong>10: Very Healthy</strong></option>
+            </select>
+            <input class="next" type="button" style="top:180px; left:45px; position:absolute;"onclick="plusDivsNumber(document.getElementById('HR_CSAfter').value)" value="Next ❯">
+        </div>
+
+       </div>
+    </div>
+
+
+
+
+    <!--Cake Partition-->
+    <div class="slides">
+      <iframe src="healthrate/cake_healthrate/index.html"
+      class="healthrate_format" frameborder="0" scrolling="no"></iframe>
+
+      <div class="questions"style="left:970px; top:270px; height:300px; width: 400px">
+      </div>
+      <div class="input_box" style="top:260px; left:900px;">
+        <label for="HR_CAInitial" style="top:-30px; position: absolute;"><b>Select One:</b></label>
+        <select name="HR_CAInitial" id="HR_CAInitial" class="w3-select">
+          <option value="">----</option>
+          <option value="1"><strong>1: Not Healthy</strong></option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10"> <strong>10: Very Healthy</strong></option>
+        </select>
+        <input class="next" type="button" style="top:180px; left:45px; position:absolute;"onclick="plusDivsNumber(document.getElementById('HR_CAInitial').value)" value="Next ❯">
+      </div> 
+</div>
+
+    <div class="slides">
+        <iframe src="partition/CAText-P.html" 
+        class="partition" frameborder="0" scrolling="no" onmouseout="getOutP()" onmouseenter="getIn()"></iframe>
+        <div class = "viz_instructions" style="left:995px; top:150px; height:300px; width: 350px; text-align:center;">
+          <i>Answer the following question based on the nutrition label and narrative. 
+            <p> Hover over the text with your mouse to highlight the related section of the nutrition label. </p>
+          </i>
+        </div>  
+        <div class="questions"style="left:1025px; top:300px; height:300px; width: 350px">
+          <p class = "balanced_diet_format">
+            Rank the food product on the scale 1-10:
+          </p>
+
+          <div class="input_box" style="top:100px; left:80px;">
+            <label for="HR_CAAfter" style="top:-20px; position: absolute;"><b>Select One:</b></label>
+            <select name="HR_CAAfter" id="HR_CAAfter" class="w3-select">
+              <option value="">----</option>
+              <option value="1"><strong>1: Not Healthy</strong></option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10"> <strong>10: Very Healthy</strong></option>
+            </select>
+            <input class="next" type="button" style="top:180px; left:45px; position:absolute;"onclick="plusDivsNumber(document.getElementById('HR_CAAfter').value)" value="Next ❯">
+        </div>
+        </div>
+    </div>
+
+
+    <!--Mac and Cheese Slide Show-->
+    <div class="slides">
+      <iframe src="healthrate/mac&cheese_healthrate/index.html"
+      class="healthrate_format" frameborder="0" scrolling="no"></iframe>
+
+      <div class="questions"style="left:970px; top:270px; height:300px; width: 400px">  
+      </div>
+      <div class="input_box" style="top:260px; left:900px;">
+        <label for="HR_MCInitial" style="top:-30px; position: absolute;"><b>Select One:</b></label>
+        <select name="HR_MCInitial" id="HR_MCInitial" class="w3-select">
+          <option value="">----</option>
+          <option value="1"><strong>1: Not Healthy</strong></option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10"> <strong>10: Very Healthy</strong></option>
+        </select>
+        <input class="next" type="button" style="top:180px; left:45px; position:absolute;"onclick="plusDivsNumber(document.getElementById('HR_MCInitial').value)" value="Next ❯">
+      </div> 
+    </div>
+
+
+    <div class="slides">
+        <iframe src="slide/MCText-SS.html" 
+        class="control" frameborder="0" scrolling="no" onmouseout="getOutS()" onmouseenter="getIn()"></iframe>
+        <div class = "viz_instructions" style="left:995px; top:150px; height:300px; width: 350px; text-align:center;">
+          <i>Answer the following question based on the nutrition label and narrative. 
+            <p> Use the 'Prev' and 'Next' buttons on the display to view further sections of the label.</p>
+          </i>
+        </div>   
+        <div class="questions"style="left:1025px; top:300px; height:300px; width:350px">
+          <p class = "balanced_diet_format">
+        Rank the food product on the scale 1-10:
+          </p>
+          <div class="input_box" style="top:100px; left:80px;">
+            <label for="HR_MCAfter" style="top:-20px; position: absolute;"><b>Select One:</b></label>
+            <select name="HR_MCAfter" id="HR_MCAfter" class="w3-select">
+              <option value="">----</option>
+              <option value="1"><strong>1: Not Healthy</strong></option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10"> <strong>10: Very Healthy</strong></option>
+            </select>
+            <input class="next" type="button" style="top:180px; left:45px; position:absolute;"onclick="plusDivsNumber(document.getElementById('HR_MCAfter').value)" value="Next ❯">
+
+        </div>
+        
+      </div>
+    </div>
+
+
+    <!--NUTRICLAIM-->
+    <div class="slides">
+        <iframe src="instructions/NUTRICLAIM.html" class="instructions" frameborder="0"></iframe>
+        <div class="questions">
+          <input class="next" type="button" onclick="plusDivsNoAnswer()" value="Next ❯">
+        </div>
+    </div>
+
+
+    <!--Mac and Cheese Magazine-->
+    <!--
+      <p>This product is high in Calcium.</p>
+
+        <p>This product contains Potassium.</p>
+
+        <p>This product does not contain Added Sugars.</p>
+
+        <p>This product has 3 servings per container.</p>
+        statement below is false
+        <p>This product is low in Total Carbohydrates.</p>
+    -->
+    <div class="slides">
+        <iframe src="magazine/MCText-M.html" 
+        class="magazine" frameborder="0" onmouseout="getOutM()" onmouseenter="getIn()"></iframe>
+        <div class = "viz_instructions" style="left:995px; top:150px; height:300px; width: 350px; text-align:center;">
+          <i>Answer the following question based on the nutrition label and narrative. 
+            <p> Use the vertical scrollbar to view further sections of the label.</p>
+          </i>
+        </div>   
+        <div class="questions"style="left:995px; top:300px; height:300px; width: 400px">
+          <p class = "balanced_diet_format">Check the boxes of the statements that are true (at least 1 statement is true): </p>
+          <input type="checkbox" id="NC_MC1" name="NC_MC1" value="1" >
+          <label for="NC_MC1"> 
+            <font size="4px">
+              This product has a high amount of Calcium.
+            </font>
+          </label><br><br>
+          <input type="checkbox" id="NC_MC2" name="NC_MC2" value="1">
+          <label for="NC_MC2">
+            <font size="4px">
+              This product has a low amount of Sodium.
+            </font>
+          </label><br><br>
+          <input type="checkbox" id="NC_MC3" name="NC_MC3" value="1" >
+          <label for="NC_MC3"> 
+            <font size="4px">
+              This product has a high amount of Saturated Fat.
+            </font>
+          </label><br><br>
+          <input type="checkbox" id="NC_MC4" name="NC_MC4" value="1">
+          <label for="NC_MC4"> 
+            <font size="4px">
+              This product has a high amount of Protein.
+            </font>
+          </label><br><br>
+          <input type="checkbox" id="NC_MC5" name="NC_MC5" value="1">
+          <label for="NC_MC5"> 
+            <font size="4px">
+              This product is good for a sugar-free diet.
+            </font>
+          </label>
+          <input class="next" style="top: 250px" type="button" onclick="checkNC(document.getElementById('NC_MC1'),document.getElementById('NC_MC2'),document.getElementById('NC_MC3'),document.getElementById('NC_MC4'),document.getElementById('NC_MC5'));"value="Next ❯">
+    </div>
+  </div>
+
+  <!--<p>This product contains 250 calories per serving.</p>
+        
+
+        <p>This product is low in Sodium.</p>
+
+        <p>This product is low in Cholesterol.</p>
+
+        <p>This product contains Iron.</p>
+        statement below is false
+        <p>This product contains no Added Sugars.</p>
+      -->
+    <!--Cake: Control-->
+    <div class="slides">
+        <iframe src="control/CAText-C.html" 
+        class="control" frameborder="0" scrolling="no" onmouseout="getOutC()" onmouseenter="getIn()"></iframe>
+        <div class = "viz_instructions" style="left:995px; top:175px; height:300px; width: 350px; text-align:center;">
+          <i>Answer the following question based on the nutrition label and narrative. </i>
+        </div>
+        <div class="questions"style="left:995px; top:300px; height:300px; width: 400px">
+          <p class = "balanced_diet_format">Check the boxes of the statements that are true (at least 1 statement is true):</p>
+          <input type="checkbox" id="NC_CA1" name="NC_CA1" value="1">
+          <label for="NC_CA1"> 
+            <font size="4px">
+              This product has a low amount of Sodium.
+            </font>
+            </label><br><br>
+          <input type="checkbox" id="NC_CA2" name="NC_CA2" value="1">
+          <label for="NC_CA2"> 
+            <font size="4px">
+              This product has a high amount of Dietary Fiber.
+
+
+            </font>
+          </label><br><br>
+          <input type="checkbox" id="NC_CA3" name="NC_CA3" value="1">
+          <label for="NC_CA3"> 
+            <font size="4px">
+              This product has a high amount of Saturated Fat.
+
+            </font>
+          </label><br><br>
+          <input type="checkbox" id="NC_CA4" name="NC_CA4" value="1">
+          <label for="NC_CA4"> 
+            <font size="4px">
+              This product is bad for a low-sugar diet.
+
+            </font>
+          </label><br><br>
+          <input type="checkbox" id="NC_CA5" name="NC_CA5" value="1">
+          <label for="NC_CA5"> 
+            <font size="4px">
+              The product has a low amount of Iron.
+
+            </font>
+          </label>
+          <input class="next" style="top: 250px"  type="button" onclick="checkNC(document.getElementById('NC_CA1'),document.getElementById('NC_CA2'),document.getElementById('NC_CA3'),document.getElementById('NC_CA4'),document.getElementById('NC_CA5'));"
+          value="Next ❯">
+    </div>
+    </div>
+    <!--<p>This product has a low amount of Total Fat.</p>
+        false statement below
+        <p>This product has a low amount of Sodium.</p>
+
+        <p>This product contains Iron.</p>
+
+        <p>This product is good for a high protein diet.</p>
+
+        <p>This product includes no Added Sugars</p>-->
+    <!--CannedSoup: Slide Show-->
+    <div class="slides">
+        <iframe src="slide/CSText-SS.html" 
+        class="control" frameborder="0" scrolling="no" onmouseout="getOutS()" onmouseenter="getIn()"></iframe>
+        <div class = "viz_instructions" style="left:995px; top:150px; height:300px; width: 350px; text-align:center;">
+          <i>Answer the following question based on the nutrition label and narrative. 
+            <p> Use the 'Prev' and 'Next' buttons on the display to view further sections of the label.</p>
+          </i>
+        </div>   
+        <div class="questions"style="left:995px; top:300px; height:300px; width: 400px">
+          <p class = "balanced_diet_format">Check the boxes of the statements that are true (at least 1 statement is true):</p>
+          <input type="checkbox" id="NC_CS1" name="NC_CS1" value="1">
+          <label for="NC_CS1"> 
+            <font size="4px">
+              This product has a high amount of Sodium.
+
+            </font>
+          </label><br><br>
+          <input type="checkbox" id="NC_CS2" name="NC_CS2" value="1">
+          <label for="NC_CS2"> 
+            <font size="4px">
+              This product has a high amount of Added Sugars.
+
+            </font>
+          </label><br><br>
+          <input type="checkbox" id="NC_CS3" name="NC_CS3" value="1">
+          <label for="NC_CS3"> 
+            <font size="4px">
+              This product has a low amount of Calcium.
+
+            </font>
+          </label><br><br>
+          <input type="checkbox" id="NC_CS4" name="NC_CS4" value="1">
+          <label for="NC_CS4"> 
+            <font size="4px">
+              This product has a high amount of Cholesterol.
+ 
+            </font>
+          </label><br><br>
+          <input type="checkbox" id="NC_CS5" name="NC_CS5" value="1" >
+          <label for="NC_CS5"> 
+            <font size="4px">
+              This is a good source of Dietary Fiber.
+
+            </font>
+          </label>
+          <input class="next" style="top: 250px"  type="button" onclick="checkNC(document.getElementById('NC_CS1'),document.getElementById('NC_CS2'),document.getElementById('NC_CS3'),document.getElementById('NC_CS4'),document.getElementById('NC_CS5'));"
+          value="Next ❯">
+    </div>
+    </div>
+    <!--<p>This Daily Value Percentage of Added Sugars is 1%.</p>
+
+        <p>This product contains a good source of protein.</p>
+
+        <p>This product does contain Dietary Fiber.</p>
+        false statement below
+        <p>This product has a high amount of iron.</p>
+
+        <p>There are 2 servings within this food product.</p>-->
+    <!--PotPie: Partition-->
+    <div class="slides">
+        <iframe src="partition/PPText-P.html" 
+        class="partition" frameborder="0" scrolling="no" onmouseout="getOutP()" onmouseenter="getIn()"></iframe>
+        <div class = "viz_instructions" style="left:995px; top:150px; height:300px; width: 350px; text-align:center;">
+          <i>Answer the following question based on the nutrition label and narrative. 
+            <p> Hover over the text with your mouse to highlight the related section of the nutrition label. </p>
+          </i>
+        </div>  
+        <div class="questions"style="left:995px; top:300px; height:300px; width: 380px">
+          <p class = "balanced_diet_format">Check the boxes of the statements that are true (at least 1 statement is true):</p>
+          <input type="checkbox" id="NC_PP1" name="NC_PP1" value='1' >
+          <label for="NC_PP1"> 
+            <font size="4px">
+              This product has a low amount of Sodium.
+
+            </font>
+          </label><br><br>
+          <input type="checkbox" id="NC_PP2" name="NC_PP2" value="1">
+          <label for="NC_PP2"> 
+            <font size="4px">
+              This product has a low amount of Calcium.
+
+            </font>
+          </label><br><br>
+          <input type="checkbox" id="NC_PP3" name="NC_PP3" value="1" >
+          <label for="NC_PP3"> 
+            <font size="4px">
+              This product has a high amount of Potassium.
+
+            </font>
+          </label><br><br>
+          <input type="checkbox" id="NC_PP4" name="NC_PP4" value="1">
+          <label for="NC_PP4"> 
+            <font size="4px">
+              This product has a low amount of Added Sugar.
+
+            </font>
+          </label><br><br>
+          <input type="checkbox" id="NC_PP5" name="NC_PP5" value="1">
+          <label for="NC_PP5"> 
+            <font size="4px">
+              This product contains a good source of Protein.
+
+
+            </font>
+          </label>
+          <input class="next" style="top: 265px"  type="button" onclick="checkNC(document.getElementById('NC_PP1'),document.getElementById('NC_PP2'),document.getElementById('NC_PP3'),document.getElementById('NC_PP4'),document.getElementById('NC_PP5'));" value="Next ❯">
+    </div>
+    </div>
+
+    <!--DIETMATH-->
+    <div class="slides">
+        <iframe src="instructions/DIETMATH.html" class="instructions" frameborder="0"></iframe>
+        <div class="questions">
+          <input class="next" type="button" onclick="plusDivsNoAnswer()" value="Next ❯">
+        </div>
+
+    </div>
+
+
+    <!--CannedSoup: Partition-->
+    <!--Dietary Fiber-->
+    <div class="slides">
+        <iframe src="partition/CSText-P.html" 
+        class="partition" frameborder="0" scrolling="no" onmouseout="getOutP()" onmouseenter="getIn()"></iframe>
+        <div class = "viz_instructions" style="left:995px; top:150px; height:300px; width: 350px; text-align:center;">
+          <i>Answer the following question based on the nutrition label and narrative. 
+            <p> Hover over the text with your mouse to highlight the related section of the nutrition label. </p>
+          </i>
+        </div>  
+        <div class="questions"style="left:980px; top:280px; height:300px; width: 370px">
+          <p class = "balanced_diet_format" style="font-weight: normal">
+            How many servings of this food <i>should</i> you eat if you were trying to reach the recommended daily value for <b>dietary fiber?</b>
+          </p>
+          <p class = "balanced_diet_format" >
+            <i>Enter Numerical Value</i>          </p>
+        </div>
+        <div class = "input_box" style="left:980px; top: 400px;">
+          <input class="input"name="BD_CS" id="BD_CS" type="number"  required>
+          <input class="next" type="button" onclick="checkDM(document.getElementById('BD_CS').value)" value="Next ❯">
+        </div>
+      </div>
+
+
+    <!--PotPie: Slide Show-->
+    <!--Protein-->
+    <div class="slides">
+        <iframe src="slide/PPText-SS.html" 
+        class="control" frameborder="0" scrolling="no" onmouseout="getOutS()" onmouseenter="getIn()"></iframe>
+        <div class = "viz_instructions" style="left:995px; top:150px; height:300px; width: 350px; text-align:center;">
+          <i>Answer the following question based on the nutrition label and narrative. 
+            <p> Use the 'Prev' and 'Next' buttons on the display to view further sections of the label.</p>
+          </i>
+        </div>   
+        <div class="questions"style="left:980px; top:280px; height:300px; width: 370px">
+          <p class = "balanced_diet_format" style="font-weight: normal">
+            How many servings of this food <i>should</i> you eat if you were trying to reach the recommended daily value for <b>potassium?</b>
+          </p>
+          <p class = "balanced_diet_format" >
+            <i>Enter Numerical Value</i></p>
+        </div>
+        <div class = "input_box" style="left:980px; top: 400px;">
+          <input class="input" name="BD_PP" id="BD_PP" type="number"  required>
+          <input class="next" type="button" onclick="checkDM(document.getElementById('BD_PP').value)" value="Next ❯">
+        </div>
+    </div>
+
+
+
+    <!--Mac&Cheese: Control-->
+    <!--Sodium-->
+    <div class="slides">
+        <iframe src="control/MCText-C.html" 
+        class="control" frameborder="0" scrolling="no" onmouseout="getOutC()" onmouseenter="getIn()"></iframe>
+        <div class = "viz_instructions" style="left:995px; top:175px; height:300px; width: 350px; text-align:center;">
+          <i>Answer the following question based on the nutrition label and narrative. </i>
+        </div>
+        <div class="questions"style="left:980px; top:280px; height:300px; width: 370px">
+          <p class = "balanced_diet_format" style="font-weight: normal">
+            How many servings of this food <i>could</i> you eat without surpassing the recommended daily value for <b>protein?</b>
+          </p>
+          <p class = "balanced_diet_format">
+            <i>Enter Numerical Value</i>          </p>
+        </div>
+        <div class = "input_box" style="left:980px; top: 400px;">
+          <input class="input" name="BD_MC" id="BD_MC" type="number"  required>
+          <input class="next" type="button" onclick="checkDM(document.getElementById('BD_MC').value)" value="Next ❯">
+        </div>
+    </div>
+
+
+    <!--Cake: Magazine-->
+    <!--Carbs-->
+    <div class="slides">
+        <iframe src="magazine/CAText-M.html" 
+        class="magazine" frameborder="0" onmouseout="getOutM()" onmouseenter="getIn()"></iframe>
+        <div class = "viz_instructions" style="left:995px; top:150px; height:300px; width: 350px; text-align:center;">
+          <i>Answer the following question based on the nutrition label and narrative. 
+            <p> Use the vertical scrollbar to view further sections of the label.</p>
+          </i>
+        </div>   
+
+        <div class="questions"style="left:980px; top:280px; height:300px; width: 370px">
+          <p class = "balanced_diet_format" style="font-weight: normal">
+            How many servings of this food <i>could</i> you eat without surpassing the recommended daily value for <b>sodium</b>?
+          </p>
+          <p class = "balanced_diet_format">
+            <i>Enter Numerical Value</i>          </p>
+
+        </div>
+        <div class = "input_box" style="left:980px; top: 400px;">
+            <input class="input" name="BD_CA" id="BD_CA" type="number"  required>
+            <input class="next" type="button" onclick="checkDM(document.getElementById('BD_CA').value)" value="Next ❯">
+          </div>
+    </div>
+
+    <!--BALANCEDIET-->
+    <div class="slides">
+        <iframe src="instructions/BALANCEDIET.html" class="instructions" frameborder="0"></iframe>
+        <div class="questions">
+          <input class="next" type="button" onclick="plusDivsNoAnswer(1)" value="Next ❯">
+        </div>
+    </div>
+
+    <!--Cake: Slide Show-->
+    <!--DM_CAMore/DM_CALess-->
+    <div class="slides">
+      <iframe src="slide/CAText-SS.html" 
+      class="control" frameborder="0" scrolling="no" onmouseout="getOutS()" onmouseenter="getIn()"></iframe>
+      <div class = "viz_instructions" style="left:995px; top:70px; height:300px; width: 350px; text-align:center;">
+        <i>Answer the following questions based on the nutrition label and narrative.  
+          <p> Use the 'Prev' and 'Next' buttons on the display to view further sections of the label.</p>
+        </i>
+      </div>   
+      <div class="questions"style="left:995px; top:200px; height:100px; width: 350px">
+        <p class = "balanced_diet_format" style="width:380px; "> If you ate 3 servings in a day...</p>
+      <p class = "balanced_diet_format" style="width:380px; font-weight:normal;">
+         
+       What nutrients <i>could</i> you <b>get more of</b> in the other foods you eat that day (at least 1 nutrient should be selected):       
+      </p>
+      <div style="top: -30px; left:100px; width: 105px;" id="DM_CAMore">
+      <!--DM_Lore-->
+      <div style="position:relative">
+          <input type='checkbox' id='CAM1' name='CAM1' value='1' /> 
+          <label for="CAM1">Total Fat</label>
+          <br>
+          <input  type='checkbox' id='CAM2' name='CAM2' value="1"/>
+          <label for="CAM2">Saturated Fat</label>
+          <br>
+          <input  type='checkbox' id='CAM3' name='CAM3' value="1"/>
+          <label for="CAM3">Cholestorol</label> <br>
+          <input  type='checkbox' id='CAM4' name='CAM4' value="1"/>
+          <label for="CAM4">Sodium</label> <br>
+      </div>
+       <div style="top: -79px; left:100px; width: 160px;  position: relative; ">
+          <input  type='checkbox' id='CAM5' name='CAM5' value="1"/>
+          <label for="CAM5">Total Carbohydrates</label> <br>
+          <input  type='checkbox' id='CAM6' name='CAM6' value="1"/>
+          <label for="CAM6">Dietary Fiber</label> <br>
+          <input  type='checkbox' id='CAM7' name='CAM7' value="1"/>
+          <label for="CAM7">Added Sugars</label> <br>
+          <input  type='checkbox' id='CAM8' name='CAM8' value="1"/>
+          <label for="CAM8">Protein</label> <br>
+        </div> 
+        <div style="top: -158px; left:240px; width: 160px;  position: relative; ">
+          <input  type='checkbox' id='CAM9' name='CAM9' value="1"/>
+          <label for="CAM9">Vitamin D</label> <br>
+          <input  type='checkbox' id='CAM10' name='CAM10' value="1"/>
+          <label for="CAM10">Calcium</label> <br>
+          <input  type='checkbox' id='CAM11' name='CAM11' value="1"/>
+          <label for="CAM11">Iron</label> <br>
+          <input  type='checkbox' id='CAM12' name='CAM12' value="1"/>
+          <label for="CAM12">Potassium</label> <br>
+        </div>
+        
+    </div> 
+   
+  </br>
+  </br>
+   <p class = "balanced_diet_format" style="font-weight: normal; top: -180px; position: relative;">
+    What nutrients <i>could</i> you <b>cut back on</b> in the other foods you eat that day(at least 1 nutrient should be selected):        
+       </p>
+      
+       <div style="top: -180px; left:0px; width: 105px; position: relative;" id="DM_CALess">
+    
+        <div style="position:relative">
+            <input type='checkbox' id='CAL1' name='CAL1' value='1'/> 
+            <label for="CAL1">Total Fat</label>
+            <br>
+            <input  type='checkbox' id='CAL2' name='CAL2' value="1"/>
+            <label for="CAL2">Saturated Fat</label>
+            <br>
+            <input  type='checkbox' id='CAL3' name='CAL3' value="1"/>
+            <label for="CAL3">Cholestorol</label> <br>
+            <input  type='checkbox' id='CAL4' name='CAL4' value="1"/>
+            <label for="CAL4">Sodium</label> <br>
+        </div>
+        <div style="top: -79px; left:100px; width: 160px;  position: relative; ">
+            <input  type='checkbox' id='CAL5' name='CAL5' value="1"/>
+            <label for="CAL5">Total Carbohydrates</label> <br>
+            <input  type='checkbox' id='CAL6' name='CAL6' value="1"/>
+            <label for="CAL6">Dietary Fiber</label> <br>
+            <input  type='checkbox' id='CAL7' name='CAL7' value="1"/>
+            <label for="CAL7">Added Sugars</label> <br>
+            <input  type='checkbox' id='CAL8' name='CAL8' value="1"/>
+            <label for="CAL8">Protein</label> <br>
+        </div> 
+        <div style="top: -158px; left:240px; width: 160px;  position: relative; ">
+            <input  type='checkbox' id='CAL9' name='CAL9' value="1"/>
+            <label for="CAL9">Vitamin D</label> <br>
+            <input  type='checkbox' id='CAL10' name='CAL10' value="1"/>
+            <label for="CAL10">Calcium</label> <br>
+            <input  type='checkbox' id='CAL11' name='CAL11' value="1"/>
+            <label for="CAL11">Iron</label> <br>
+            <input  type='checkbox' id='CAL12' name='CAL12' value="1"/>
+            <label for="CAL12">Potassium</label> <br>
+          </div>
+          
+      </div> 
+      <input style="top:430px;" class="next" type="button" onclick="checkBD(document.getElementById('CAM1'),document.getElementById('CAM2'),document.getElementById('CAM3'),document.getElementById('CAM4'),document.getElementById('CAM5'),document.getElementById('CAM6'),document.getElementById('CAM7'),document.getElementById('CAM8'),document.getElementById('CAM9'),document.getElementById('CAM10'),document.getElementById('CAM11'),document.getElementById('CAM12'),document.getElementById('CAL1'),document.getElementById('CAL2'),document.getElementById('CAL3'),document.getElementById('CAL4'),document.getElementById('CAL5'),document.getElementById('CAL6'),document.getElementById('CAL7'),document.getElementById('CAL8'),document.getElementById('CAL9'),document.getElementById('CAL10'),document.getElementById('CAL11'),document.getElementById('CAL12'))" value="Next">
+
+    </div>
+</div>
+
+
+
+
+    <!--Mac&Cheese: Partition-->
+    <div class="slides">
+        <iframe src="partition/MCText-P.html" 
+        class="partition" frameborder="0" scrolling="no" onmouseout="getOutP()" onmouseenter="getIn()"></iframe>
+        <div class = "viz_instructions" style="left:995px; top:70px; height:300px; width: 350px; text-align:center;">
+          <i>Answer the following questions based on the nutrition label and narrative.  
+            <p> Hover over the text with your mouse to highlight the related section of the nutrition label. </p>
+          </i>
+        </div>  
+        <!--DM_MCMore & DM_MCLess-->
+        <div class="questions"style="left:995px; top:200px; height:100px; width: 350px">
+          <p class = "balanced_diet_format" style="width:380px; "> If you ate 3 servings in a day...</p>
+        <p class = "balanced_diet_format" style="width:380px; font-weight:normal;">
+           
+          What nutrients <i>could</i> you <b>get more of</b> in the other foods you eat that day (at least 1 nutrient should be selected):        
+        </p>
+        <div style="top: -30px; left:100px; width: 105px;" id="DM_MCMore">
+        <!--DM_Lore-->
+        <div style="position:relative">
+            <input type='checkbox' id='MCM1' name='MCM1' value='1' /> 
+            <label for="MCM1">Total Fat</label>
+            <br>
+            <input  type='checkbox' id='MCM2' name='MCM2' value="1"/>
+            <label for="MCM2">Saturated Fat</label>
+            <br>
+            <input  type='checkbox' id='MCM3' name='MCM3' value="1"/>
+            <label for="MCM3">Cholestorol</label> <br>
+            <input  type='checkbox' id='MCM4' name='MCM4' value="1"/>
+            <label for="MCM4">Sodium</label> <br>
+        </div>
+         <div style="top: -79px; left:100px; width: 160px;  position: relative; ">
+            <input  type='checkbox' id='MCM5' name='MCM5' value="1"/>
+            <label for="MCM5">Total Carbohydrates</label> <br>
+            <input  type='checkbox' id='MCM6' name='MCM6' value="1"/>
+            <label for="MCM6">Dietary Fiber</label> <br>
+            <input  type='checkbox' id='MCM7' name='MCM7' value="1"/>
+            <label for="MCM7">Added Sugars</label> <br>
+            <input  type='checkbox' id='MCM8' name='MCM8' value="1"/>
+            <label for="MCM8">Protein</label> <br>
+          </div> 
+          <div style="top: -158px; left:240px; width: 160px;  position: relative; ">
+            <input  type='checkbox' id='MCM9' name='MCM9' value="1"/>
+            <label for="MCM9">Vitamin D</label> <br>
+            <input  type='checkbox' id='MCM10' name='MCM10' value="1"/>
+            <label for="MCM10">Calcium</label> <br>
+            <input  type='checkbox' id='MCM11' name='MCM11' value="1"/>
+            <label for="MCM11">Iron</label> <br>
+            <input  type='checkbox' id='MCM12' name='MCM12' value="1"/>
+            <label for="MCM12">Potassium</label> <br>
+          </div>
+          
+      </div> 
+     
+    </br>
+    </br>
+     <p class = "balanced_diet_format" style="font-weight: normal; top: -180px; position: relative;">
+      What nutrients <i>could</i> you <b>cut back on</b> in the other foods you eat that day (at least 1 nutrient should be selected):         
+         </p>
+        
+         <div style="top: -180px; left:0px; width: 105px; position: relative;" id="DM_MCLess">
+      
+          <div style="position:relative">
+              <input type='checkbox' id='MCL1' name='MCL1' value='1'/> 
+              <label for="MCL1">Total Fat</label>
+              <br>
+              <input  type='checkbox' id='MCL2' name='MCL2' value="1"/>
+              <label for="MCL2">Saturated Fat</label>
+              <br>
+              <input  type='checkbox' id='MCL3' name='MCL3' value="1"/>
+              <label for="MCL3">Cholestorol</label> <br>
+              <input  type='checkbox' id='MCL4' name='MCL4' value="1"/>
+              <label for="MCL4">Sodium</label> <br>
+          </div>
+          <div style="top: -79px; left:100px; width: 160px;  position: relative; ">
+              <input  type='checkbox' id='MCL5' name='MCL5' value="1"/>
+              <label for="MCL5">Total Carbohydrates</label> <br>
+              <input  type='checkbox' id='MCL6' name='MCL6' value="1"/>
+              <label for="MCL6">Dietary Fiber</label> <br>
+              <input  type='checkbox' id='MCL7' name='MCL7' value="1"/>
+              <label for="MCL7">Added Sugars</label> <br>
+              <input  type='checkbox' id='MCL8' name='MCL8' value="1"/>
+              <label for="MCL8">Protein</label> <br>
+          </div> 
+          <div style="top: -158px; left:240px; width: 160px;  position: relative; ">
+              <input  type='checkbox' id='MCL9' name='MCL9' value="1"/>
+              <label for="MCL9">Vitamin D</label> <br>
+              <input  type='checkbox' id='MCL10' name='MCL10' value="1"/>
+              <label for="MCL10">Calcium</label> <br>
+              <input  type='checkbox' id='MCL11' name='MCL11' value="1"/>
+              <label for="MCL11">Iron</label> <br>
+              <input  type='checkbox' id='MCL12' name='MCL12' value="1"/>
+              <label for="MCL12">Potassium</label> <br>
+            </div>
+            
+        </div> 
+        <input style="top:430px;" class="next" type="button" onclick="checkBD(document.getElementById('MCM1'),document.getElementById('MCM2'),document.getElementById('MCM3'),document.getElementById('MCM4'),document.getElementById('MCM5'),document.getElementById('MCM6'),document.getElementById('MCM7'),document.getElementById('MCM8'),document.getElementById('MCM9'),document.getElementById('MCM10'),document.getElementById('MCM11'),document.getElementById('MCM12'),document.getElementById('MCL1'),document.getElementById('MCL2'),document.getElementById('MCL3'),document.getElementById('MCL4'),document.getElementById('MCL5'),document.getElementById('MCL6'),document.getElementById('MCL7'),document.getElementById('MCL8'),document.getElementById('MCL9'),document.getElementById('MCL10'),document.getElementById('MCL11'),document.getElementById('MCL12'))" value="Next">
+
+      </div>
+    </div>
+
+
+    <!--PotPie: Magazine-->
+    <div class="slides">
+        <iframe src="magazine/PPText-M.html" 
+        class="magazine" frameborder="0" onmouseout="getOutM()" onmouseenter="getIn()"></iframe>
+        <div class = "viz_instructions" style="left:995px; top:70px; height:300px; width: 350px; text-align:center;">
+          <i>Answer the following questions based on the nutrition label and narrative. 
+            <p> Use the vertical scrollbar to view further sections of the label.</p>
+          </i>
+        </div>  
+        <!--DM_PPMore & DM_PPLess--> 
+        <div class="questions"style="left:995px; top:200px; height:100px; width: 350px">
+          <p class = "balanced_diet_format" style="width:380px; "> If you ate 3 servings in a day...</p>
+        <p class = "balanced_diet_format" style="width:380px; font-weight:normal;">
+           
+          What nutrients <i>could</i> you <b>get more of</b> in the other foods you eat that day (at least 1 nutrient should be selected):      
+        </p>
+        <div style="top: -30px; left:100px; width: 105px;" id="DM_PPMore">
+        <!--DM_Lore-->
+        <div style="position:relative">
+            <input type='checkbox' id='PPM1' name='PPM1' value='1' /> 
+            <label for="PPM1">Total Fat</label>
+            <br>
+            <input  type='checkbox' id='PPM2' name='PPM2' value="1"/>
+            <label for="PPM2">Saturated Fat</label>
+            <br>
+            <input  type='checkbox' id='PPM3' name='PPM3' value="1"/>
+            <label for="PPM3">Cholestorol</label> <br>
+            <input  type='checkbox' id='PPM4' name='PPM4' value="1"/>
+            <label for="PPM4">Sodium</label> <br>
+        </div>
+         <div style="top: -79px; left:100px; width: 160px;  position: relative; ">
+            <input  type='checkbox' id='PPM5' name='PPM5' value="1"/>
+            <label for="PPM5">Total Carbohydrates</label> <br>
+            <input  type='checkbox' id='PPM6' name='PPM6' value="1"/>
+            <label for="PPM6">Dietary Fiber</label> <br>
+            <input  type='checkbox' id='PPM7' name='PPM7' value="1"/>
+            <label for="PPM7">Added Sugars</label> <br>
+            <input  type='checkbox' id='PPM8' name='PPM8' value="1"/>
+            <label for="PPM8">Protein</label> <br>
+          </div> 
+          <div style="top: -158px; left:240px; width: 160px;  position: relative; ">
+            <input  type='checkbox' id='PPM9' name='PPM9' value="1"/>
+            <label for="PPM9">Vitamin D</label> <br>
+            <input  type='checkbox' id='PPM10' name='PPM10' value="1"/>
+            <label for="PPM10">Calcium</label> <br>
+            <input  type='checkbox' id='PPM11' name='PPM11' value="1"/>
+            <label for="PPM11">Iron</label> <br>
+            <input  type='checkbox' id='PPM12' name='PPM12' value="1"/>
+            <label for="PPM12">Potassium</label> <br>
+          </div>
+          
+      </div> 
+     
+    </br>
+    </br>
+     <p class = "balanced_diet_format" style="font-weight: normal; top: -180px; position: relative;">
+      What nutrients <i>could</i> you <b>cut back on</b> in the other foods you eat that day (at least 1 nutrient should be selected):        
+         </p>
+        
+         <div style="top: -180px; left:0px; width: 105px; position: relative;" id="DM_PPLess">
+      
+          <div style="position:relative">
+              <input type='checkbox' id='PPL1' name='PPL1' value='1'/> 
+              <label for="PPL1">Total Fat</label>
+              <br>
+              <input  type='checkbox' id='PPL2' name='PPL2' value="1"/>
+              <label for="PPL2">Saturated Fat</label>
+              <br>
+              <input  type='checkbox' id='PPL3' name='PPL3' value="1"/>
+              <label for="PPL3">Cholestorol</label> <br>
+              <input  type='checkbox' id='PPL4' name='PPL4' value="1"/>
+              <label for="PPL4">Sodium</label> <br>
+          </div>
+          <div style="top: -79px; left:100px; width: 160px;  position: relative; ">
+              <input  type='checkbox' id='PPL5' name='PPL5' value="1"/>
+              <label for="PPL5">Total Carbohydrates</label> <br>
+              <input  type='checkbox' id='PPL6' name='PPL6' value="1"/>
+              <label for="PPL6">Dietary Fiber</label> <br>
+              <input  type='checkbox' id='PPL7' name='PPL7' value="1"/>
+              <label for="PPL7">Added Sugars</label> <br>
+              <input  type='checkbox' id='PPL8' name='PPL8' value="1"/>
+              <label for="PPL8">Protein</label> <br>
+          </div> 
+          <div style="top: -158px; left:240px; width: 160px;  position: relative; ">
+              <input  type='checkbox' id='PPL9' name='PPL9' value="1"/>
+              <label for="PPL9">Vitamin D</label> <br>
+              <input  type='checkbox' id='PPL10' name='PPL10' value="1"/>
+              <label for="PPL10">Calcium</label> <br>
+              <input  type='checkbox' id='PPL11' name='PPL11' value="1"/>
+              <label for="PPL11">Iron</label> <br>
+              <input  type='checkbox' id='PPL12' name='PPL12' value="1"/>
+              <label for="PPL12">Potassium</label> <br>
+            </div>
+            
+        </div> 
+        <input style="top:430px;" class="next" type="button" onclick="checkBD(document.getElementById('PPM1'),document.getElementById('PPM2'),document.getElementById('PPM3'),document.getElementById('PPM4'),document.getElementById('PPM5'),document.getElementById('PPM6'),document.getElementById('PPM7'),document.getElementById('PPM8'),document.getElementById('PPM9'),document.getElementById('PPM10'),document.getElementById('PPM11'),document.getElementById('PPM12'),document.getElementById('PPL1'),document.getElementById('PPL2'),document.getElementById('PPL3'),document.getElementById('PPL4'),document.getElementById('PPL5'),document.getElementById('PPL6'),document.getElementById('PPL7'),document.getElementById('PPL8'),document.getElementById('PPL9'),document.getElementById('PPL10'),document.getElementById('PPL11'),document.getElementById('PPL12'))" value="Next">
+      </div>
+        </div>
+
+
+    <!--CannedSoup: Control-->
+    <div class="slides">
+        <iframe src="control/CSText-C.html" 
+        class="control" frameborder="0" scrolling="no" onmouseout="getOutC()" onmouseenter="getIn()"></iframe>
+      <div class = "viz_instructions" style="left:995px; top:95px; height:300px; width: 350px; text-align:center;">
+        <i>Answer the following questions based on the nutrition label and narrative. </i>
+      </div>
+      <!--DM_CSMore & DM_CSLess -->
+      <div class="questions"style="left:995px; top:200px; height:100px; width: 350px">
+        <p class = "balanced_diet_format" style="width:380px; "> If you ate 3 servings in a day...</p>
+      <p class = "balanced_diet_format" style="width:380px; font-weight:normal;">
+         
+        What nutrients <i>could</i> you <b>get more of</b> in the other foods you eat that day (at least 1 nutrient should be selected):       
+      </p>
+      <div style="top: -30px; left:100px; width: 105px;" id="DM_CSMore">
+      <!--DM_Lore-->
+      <div style="position:relative">
+          <input type='checkbox' id='CSM1' name='CSM1' value='1' /> 
+          <label for="CSM1">Total Fat</label>
+          <br>
+          <input  type='checkbox' id='CSM2' name='CSM2' value="1"/>
+          <label for="CSM2">Saturated Fat</label>
+          <br>
+          <input  type='checkbox' id='CSM3' name='CSM3' value="1"/>
+          <label for="CSM3">Cholesterol</label> <br>
+          <input  type='checkbox' id='CSM4' name='CSM4' value="1"/>
+          <label for="CSM4">Sodium</label> <br>
+      </div>
+       <div style="top: -79px; left:100px; width: 160px;  position: relative; ">
+          <input  type='checkbox' id='CSM5' name='CSM5' value="1"/>
+          <label for="CSM5">Total Carbohydrates</label> <br>
+          <input  type='checkbox' id='CSM6' name='CSM6' value="1"/>
+          <label for="CSM6">Dietary Fiber</label> <br>
+          <input  type='checkbox' id='CSM7' name='CSM7' value="1"/>
+          <label for="CSM7">Added Sugars</label> <br>
+          <input  type='checkbox' id='CSM8' name='CSM8' value="1"/>
+          <label for="CSM8">Protein</label> <br>
+        </div> 
+        <div style="top: -158px; left:240px; width: 160px;  position: relative; ">
+          <input  type='checkbox' id='CSM9' name='CSM9' value="1"/>
+          <label for="CSM9">Vitamin D</label> <br>
+          <input  type='checkbox' id='CSM10' name='CSM10' value="1"/>
+          <label for="CSM10">Calcium</label> <br>
+          <input  type='checkbox' id='CSM11' name='CSM11' value="1"/>
+          <label for="CSM11">Iron</label> <br>
+          <input  type='checkbox' id='CSM12' name='CSM12' value="1"/>
+          <label for="CSM12">Potassium</label> <br>
+        </div>
+        
+    </div> 
+   
+  </br>
+  </br>
+   <p class = "balanced_diet_format" style="font-weight: normal; top: -180px; position: relative;">
+    What nutrients <i>could</i> you <b>cut back on</b> in the other foods you eat that day (at least 1 nutrient should be selected):         
+       </p>
+      
+       <div style="top: -180px; left:0px; width: 105px; position: relative;" id="DM_CSLess">
+    
+        <div style="position:relative">
+            <input type='checkbox' id='CSL1' name='CSL1' value='1'/> 
+            <label for="CSL1">Total Fat</label>
+            <br>
+            <input  type='checkbox' id='CSL2' name='CSL2' value="1"/>
+            <label for="CSL2">Saturated Fat</label>
+            <br>
+            <input  type='checkbox' id='CSL3' name='CSL3' value="1"/>
+            <label for="CSL3">Cholestorol</label> <br>
+            <input  type='checkbox' id='CSL4' name='CSL4' value="1"/>
+            <label for="CSL4">Sodium</label> <br>
+        </div>
+        <div style="top: -79px; left:100px; width: 160px;  position: relative; ">
+            <input  type='checkbox' id='CSL5' name='CSL5' value="1"/>
+            <label for="CSL5">Total Carbohydrates</label> <br>
+            <input  type='checkbox' id='CSL6' name='CSL6' value="1"/>
+            <label for="CSL6">Dietary Fiber</label> <br>
+            <input  type='checkbox' id='CSL7' name='CSL7' value="1"/>
+            <label for="CSL7">Added Sugars</label> <br>
+            <input  type='checkbox' id='CSL8' name='CSL8' value="1"/>
+            <label for="CSL8">Protein</label> <br>
+        </div> 
+        <div style="top: -158px; left:240px; width: 160px;  position: relative; ">
+            <input  type='checkbox' id='CSL9' name='CSL9' value="1"/>
+            <label for="CSL9">Vitamin D</label> <br>
+            <input  type='checkbox' id='CSL10' name='CSL10' value="1"/>
+            <label for="CSL10">Calcium</label> <br>
+            <input  type='checkbox' id='CSL11' name='CSL11' value="1"/>
+            <label for="CSL11">Iron</label> <br>
+            <input  type='checkbox' id='CSL12' name='CSL12' value="1"/>
+            <label for="CSL12">Potassium</label> <br>
+          </div>
+          
+      </div> 
+      <input style="top:430px;" class="next" type="button" onclick="checkBD(document.getElementById('CSM1'),document.getElementById('CSM2'),document.getElementById('CSM3'),document.getElementById('CSM4'),document.getElementById('CSM5'),document.getElementById('CSM6'),document.getElementById('CSM7'),document.getElementById('CSM8'),document.getElementById('CSM9'),document.getElementById('CSM10'),document.getElementById('CSM11'),document.getElementById('CSM12'),document.getElementById('CSL1'),document.getElementById('CSL2'),document.getElementById('CSL3'),document.getElementById('CSL4'),document.getElementById('CSL5'),document.getElementById('CSL6'),document.getElementById('CSL7'),document.getElementById('CSL8'),document.getElementById('CSL9'),document.getElementById('CSL10'),document.getElementById('CSL11'),document.getElementById('CSL12'))" value="Next">
+
+    </div>
+    </div>
+
+    <!--Preference Survey-->
+
+    <div class="slides">
+      <div class="box" style="left: 20px; top: 20px">
+        <div class="preference_format">Format #1</div>
+        <iframe
+          src="control/BBText-C.html"
+          class="preference_box"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
+      <div class="box" style="left: 475px; top: 20px">
+        <div class="preference_format" style="left: 20px">Format #2</div>
+        <iframe
+          src="partition/BBText-P.html"
+          class="preference_box"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
+      <div class="box" style="left: 10px; top: 450px">
+        <div class="preference_format" style="left: 20px">Format #3</div>
+        <iframe
+          src="magazine/BBText-M.html"
+          class="preference_box"
+          frameborder="0"
+          scrolling="yes"
+        ></iframe>
+      </div>
+      <div class="box" style="left: 500px; top: 450px">
+        <div class="preference_format" style="left: 20px">Format #4</div>
+        <iframe
+          src="slide/BBText-SS.html"
+          class="preference_box"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
+
+
+      <div class="questions" style="left: 980px; top: 85px; width: 380px">
+        <p style="font-size: 18px; text-align: center">
+          <i
+            >You may review and interact with the format options to answer the
+            questions below.<b> Text answers must be full sentences and different for each question in order to be approved on MTurk for this study.</b></i
+          >
+        </p>
+        <p class="balanced_diet_format" style="font-weight: normal">
+          Which label would be the <b>most</b> helpful to you
+          for selecting nutritious foods and planning meals?<i>
+            Select format option number (1, 2, 3, 4):</i
+          >
+        </p>
+        <div class="input_box" style="top: -10px; position: relative">
+          <select name="pref_most" id="pref_most" class="w3-select">
+            <option value="">--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+
+        <p class="balanced_diet_format" style="top: -30px; position: relative;padding:5px;">
+          Why?
+        </p>
+        <div class="input_box" style="top: -50px; position: relative">
+          <textarea
+            name="pref_most_reason"
+            id="pref_most_reason"
+            style="height: 50px; width: 200px"
+            type="text"
+            required
+          ></textarea>
+        </div>
+
+        <p class="balanced_diet_format" style="top: -50px; position: relative; font-weight: normal">
+          Which label would be the <b>least</b> helpful to
+          you for selecting nutritious foods and planning meals?<i>
+            Select format option number (1, 2, 3, 4):</i
+          >
+        </p>
+        <div class="input_box" style="top: -60px; position: relative">
+          <select name="pref_least" id="pref_least" class="w3-select">
+            <option value="">--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+
+        <p class="balanced_diet_format" style="top: -80px; position: relative; padding:5px;">
+          Why?
+        </p>
+        <div class="input_box" style="top: -100px; position: relative">
+          <textarea
+            name="pref_least_reason"
+            id="pref_least_reason"
+            style="height: 50px; width: 200px"
+            type="text"
+            required
+          ></textarea>
+        </div>
+        <input
+          class="submit"
+          style="top: -50px; position: relative"
+          type="button"
+          value="Next"
+          style
+          onclick="checkAll(document.getElementById('pref_most').value,document.getElementById('pref_most_reason').value,document.getElementById('pref_least').value,document.getElementById('pref_least_reason').value);"
+        />
+      </div>
+    </div>
+   <div class="slides">
+    <h1>Congratulations! You have finished the survey</h1>
+    <h3>Please click the submit button below to submit your results and receive your unique identifier to paste into the textbox on Amazon Mechanical Turk so you may be compensated. Thank you for participating in this survey.</h3>
+    <div style ="left: 400px; top: 600px; position: absolute;">
+      <input style="opacity: 0" type="text" id="ctimer" name="ctimer" /><br />
+      <input style="opacity: 0" type="text" id="ptimer" name="ptimer" /><br />
+      <input style="opacity: 0" type="text" id="stimer" name="stimer" /><br />
+      <input style="opacity: 0" type="text" id="mtimer" name="mtimer" /><br />
+      <input style="opacity: 0" type="text" id="c_amount" name="c_amount" /><br />
+      <input style="opacity: 0" type="text" id="p_amount" name="p_amount" /><br />
+      <input style="opacity: 0" type="text" id="s_amount" name="s_amount" /><br />
+      <input style="opacity: 0" type="text" id="m_amount" name="m_amount" /><br />
+    </div>
+
+    
+    <button type="submit">Submit</button>
+     <div class="questions">
+     </div>
+   </div>
+</form>
+
+
+  <script>
+    function handleFormSubmit(event) {  // handles form submit without any jquery
+      
+        event.preventDefault();           // we are submitting via xhr below
+        var form = event.target;
+        var formData = getFormData(form);
+        var data = formData.data;
+        
+    }
+
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+
+    function getWorkerID() {
+      return document.getElementById('WorkerID');
+    }
+
+    function checkDM(text) {
+     if (text.length==0) {
+       alert("please fill question");
+     } else if (text <= 0){
+       alert("answer must be a positive number");
+     } else if ((text%1) != 0) {
+       alert("answer must be a whole number")
+     }
+      else {
+     showDivs((slideIndex += 1));
+     }
+   }
+
+   function checkNC(text1, text2, text3, text4, text5) {
+      if (!text1.checked && !text2.checked && !text3.checked && !text4.checked && !text5.checked) {
+        alert("Must select at least one statement")
+      } else {
+       showDivs((slideIndex += 1));
+      }
+     }
+
+     function checkBD(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x) {
+         let array = [a,b,c,d,e,f,g,h,i,j,k,l];
+         let array2 =[m,n,o,p,q,r,s,t,u,v,w,x];
+         let count = 0;
+         let count2 =0;
+        
+         for (let i=0;i<array.length;i++) {
+           if(!array[i].checked) {
+             count++;
+           }
+           if(!array2[i].checked) {
+             count2++;
+           }
+         }
+        
+         if (count == 12 || count2 == 12 ) {
+           alert("Must select at least one answer for each question");
+         } else {
+           showDivs((slideIndex += 1));
+         }
+     }
+    function plusDivs(text) {
+      //let answer = document.querySelector('input[name="answer"]').value;
+      
+      if (text.length==0) {
+        alert("please fill question");
+      }
+       else {
+      showDivs((slideIndex += 1));
+      }
+    }
+    function checkAll(text1, text2, text3, text4) { 
+      if (text1.length==0 || text2.length==0 || text3.length==0 || text4.length==0) {
+        alert("please fill all questions");
+      } else if (text1 == text3) {
+        alert("your most helpful and least helpful options should not be the same");
+      }
+      else {
+      showDivs((slideIndex += 1));
+      }
+    }
+    function checkBoth(text1,text2) {
+      if (text1.length==0 || text2.length==0) {
+        alert("please fill question");
+      } else {
+        showDivs((slideIndex += 1));
+      }
+    }
+
+    function plusDivsNumber(num) {
+      if (num.length!=0 && (num >10 || num<=0)) {
+        alert("please put only appropriate numbers in the input field:1-10");
+      } else if (num.length==0) {
+        alert("please fill question");
+      }
+      else {
+      showDivs((slideIndex += 1));
+      }
+    }
+
+    function plusDivsNoAnswer(n) {
+      showDivs((slideIndex += 1));
+    }
+
+    function currentDiv(n) {
+      showDivs((slideIndex = n));
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("slides");
+      var y = document.getElementsByClassName("questions");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = x.length;
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        y[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex - 1].style.display = "block";
+      y[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " w3-red";
+    }
+
+    var time = 0;
+    var hover = 0;
+    var out = 0;
+    var control_counter = 0;
+    var partition_counter = 0;
+    var slide_counter = 0;
+    var mag_counter = 0;
+    var con_times =0;
+    var mag_times =0;
+    var part_times =0;
+    var slide_times =0;
+    
+    function start(x) {
+      control_counter = x;
+      partition_counter = x;
+      slide_counter = x;
+      mag_counter = x;
+      con_times = x;
+      mag_times = x;
+      part_times = x;
+      slide_times = x;
+    }
+    function getIn() {
+      hover = Date.now();
+    }
+    function getOutC() {
+      out = Date.now();
+      time = out - hover;
+      control_counter += time;
+      hoveredC();
+      document.getElementById("ctimer").value = control_counter;
+    }
+    function getOutP() {
+      out = Date.now();
+      time = out - hover;
+      partition_counter += time;
+      hoveredP();
+      document.getElementById("ptimer").value = partition_counter;
+    }
+    function getOutS() {
+      out = Date.now();
+      time = out - hover;
+      slide_counter += time;
+      hoveredS();
+      document.getElementById("stimer").value = slide_counter;
+    }
+    function getOutM() {
+      out = Date.now();
+      time = out - hover;
+      mag_counter += time;
+      hoveredM();
+      document.getElementById("mtimer").value = mag_counter;
+    }
+    function hoveredC() {
+      con_times++;
+      document.getElementById("c_amount").value = con_times;
+    }
+    function hoveredP() {
+      part_times++;
+      document.getElementById("p_amount").value = part_times;
+    } 
+    function hoveredM() {
+      mag_times++;
+      document.getElementById("m_amount").value = mag_times;
+    }
+    function hoveredS() {
+      slide_times++;
+      document.getElementById("s_amount").value = slide_times;
+    }
+  </script>
+  </body>
+</html>
