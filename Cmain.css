@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.line {
+  width: 440px;
+  left: 0px;
+  border: 0.5px solid #dfdfdf;
+  position: absolute;
+}
+.servings {
+  width: 213px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 6px;
+  left: 8px;
+
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: left;
+}
+.calories {
+  width: 159px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 100px;
+  left: 8px;
+
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.nutrition_facts {
+  width: 455px;
+  height: 940px;
+  top: 0px;
+  left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+}
+.dv {
+  width: 122px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 202px;
+  left: 330px;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.nutrients {
+  width: "100%";
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 5px;
+
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.percents {
+  width: 39px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 401px;
+
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: right;
+}
+.percents2 {
+  width: 39px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 401px;
+
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: right;
+}
+.footnote {
+  width: 450px;
+  top: 804px;
+  left: 5px;
+  position: absolute;
+
+  font-style: Regular;
+  font-size: 16px;
+}
+.narrative {
+  width: 455px;
+  left: 465px;
+  text-indent: 10px;
+  position: absolute;
+  font-family: Times New Roman;
+  font-size: 20px;
+}

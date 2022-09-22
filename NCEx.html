@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="main.css" rel="stylesheet" />
+    <title>NUTRICLAIM</title>
+  </head>
+  <body>
+    <div class="slides">
+      <iframe
+        src="CAText-C.html"
+        class="control"
+        frameborder="0"
+        scrolling="no"
+        onmouseout="getOutC()"
+        onmouseenter="getIn()"
+      ></iframe>
+      <div
+        class="viz_instructions"
+        style="
+          left: 995px;
+          top: 175px;
+          height: 300px;
+          width: 350px;
+          text-align: center;
+        "
+      >
+        <i
+          >Answer the following question based on the nutrition label and
+          narrative.
+        </i>
+      </div>
+      <div
+        class="questions"
+        style="left: 995px; top: 300px; height: 300px; width: 400px"
+      >
+        <p class="balanced_diet_format">
+          Check the boxes of the statements that are true (at least 1 statement
+          is true):
+        </p>
+        <input type="checkbox" id="NC_CA1" name="NC_CA1" value="1" />
+        <label for="NC_CA1">
+          <font size="4px">
+            This product has a low amount of Sodium.
+          </font> </label
+        ><br /><br />
+        <input type="checkbox" id="NC_CA2" name="NC_CA2" value="1" />
+        <label for="NC_CA2">
+          <font size="4px">
+            This product has a high amount of Dietary Fiber.
+          </font> </label
+        ><br /><br />
+        <input type="checkbox" id="NC_CA3" name="NC_CA3" value="1" />
+        <label for="NC_CA3">
+          <font size="4px">
+            This product has a high amount of Saturated Fat.
+          </font> </label
+        ><br /><br />
+        <input type="checkbox" id="NC_CA4" name="NC_CA4" value="1" />
+        <label for="NC_CA4">
+          <font size="4px">
+            This product is bad for a low-sugar diet.
+          </font> </label
+        ><br /><br />
+        <input type="checkbox" id="NC_CA5" name="NC_CA5" value="1" />
+        <label for="NC_CA5">
+          <font size="4px"> The product has a low amount of Iron. </font>
+        </label>
+      </div>
+    </div>
+  </body>
+</html>

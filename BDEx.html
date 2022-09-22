@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="main.css" rel="stylesheet" />
+    <title>BALANCEDIET</title>
+  </head>
+  <body>
+    <div class="slides">
+        <iframe src="CSText-C.html" 
+        class="control" frameborder="0" scrolling="no" onmouseout="getOutC()" onmouseenter="getIn()"></iframe>
+      <div class = "viz_instructions" style="left:995px; top:95px; height:300px; width: 350px; text-align:center;">
+        <i>Answer the following questions based on the nutrition label and narrative. </i>
+      </div>
+      <!--DM_CSMore & DM_CSLess -->
+      <div class="questions"style="left:995px; top:200px; height:100px; width: 350px">
+        <p class = "balanced_diet_format" style="width:380px; "> If you ate 3 servings in a day...</p>
+      <p class = "balanced_diet_format" style="width:380px; font-weight:normal;">
+         
+        What nutrients <i>could</i> you <b>get more of</b> in the other foods you eat that day (at least 1 nutrient should be selected):       
+      </p>
+      <div style="top: -30px; left:100px; width: 105px;" id="DM_CSMore">
+      <!--DM_Lore-->
+      <div style="position:relative">
+          <input type='checkbox' id='CSM1' name='CSM1' value='1' /> 
+          <label for="CSM1">Total Fat</label>
+          <br>
+          <input  type='checkbox' id='CSM2' name='CSM2' value="1"/>
+          <label for="CSM2">Saturated Fat</label>
+          <br>
+          <input  type='checkbox' id='CSM3' name='CSM3' value="1"/>
+          <label for="CSM3">Cholesterol</label> <br>
+          <input  type='checkbox' id='CSM4' name='CSM4' value="1"/>
+          <label for="CSM4">Sodium</label> <br>
+      </div>
+       <div style="top: -79px; left:100px; width: 160px;  position: relative; ">
+          <input  type='checkbox' id='CSM5' name='CSM5' value="1"/>
+          <label for="CSM5">Total Carbohydrates</label> <br>
+          <input  type='checkbox' id='CSM6' name='CSM6' value="1"/>
+          <label for="CSM6">Dietary Fiber</label> <br>
+          <input  type='checkbox' id='CSM7' name='CSM7' value="1"/>
+          <label for="CSM7">Added Sugars</label> <br>
+          <input  type='checkbox' id='CSM8' name='CSM8' value="1"/>
+          <label for="CSM8">Protein</label> <br>
+        </div> 
+        <div style="top: -158px; left:240px; width: 160px;  position: relative; ">
+          <input  type='checkbox' id='CSM9' name='CSM9' value="1"/>
+          <label for="CSM9">Vitamin D</label> <br>
+          <input  type='checkbox' id='CSM10' name='CSM10' value="1"/>
+          <label for="CSM10">Calcium</label> <br>
+          <input  type='checkbox' id='CSM11' name='CSM11' value="1"/>
+          <label for="CSM11">Iron</label> <br>
+          <input  type='checkbox' id='CSM12' name='CSM12' value="1"/>
+          <label for="CSM12">Potassium</label> <br>
+        </div>
+        
+    </div> 
+   
+  </br>
+  </br>
+   <p class = "balanced_diet_format" style="font-weight: normal; top: -180px; position: relative;">
+    What nutrients <i>could</i> you <b>cut back on</b> in the other foods you eat that day (at least 1 nutrient should be selected):         
+       </p>
+      
+       <div style="top: -180px; left:0px; width: 105px; position: relative;" id="DM_CSLess">
+    
+        <div style="position:relative">
+            <input type='checkbox' id='CSL1' name='CSL1' value='1'/> 
+            <label for="CSL1">Total Fat</label>
+            <br>
+            <input  type='checkbox' id='CSL2' name='CSL2' value="1"/>
+            <label for="CSL2">Saturated Fat</label>
+            <br>
+            <input  type='checkbox' id='CSL3' name='CSL3' value="1"/>
+            <label for="CSL3">Cholestorol</label> <br>
+            <input  type='checkbox' id='CSL4' name='CSL4' value="1"/>
+            <label for="CSL4">Sodium</label> <br>
+        </div>
+        <div style="top: -79px; left:100px; width: 160px;  position: relative; ">
+            <input  type='checkbox' id='CSL5' name='CSL5' value="1"/>
+            <label for="CSL5">Total Carbohydrates</label> <br>
+            <input  type='checkbox' id='CSL6' name='CSL6' value="1"/>
+            <label for="CSL6">Dietary Fiber</label> <br>
+            <input  type='checkbox' id='CSL7' name='CSL7' value="1"/>
+            <label for="CSL7">Added Sugars</label> <br>
+            <input  type='checkbox' id='CSL8' name='CSL8' value="1"/>
+            <label for="CSL8">Protein</label> <br>
+        </div> 
+        <div style="top: -158px; left:240px; width: 160px;  position: relative; ">
+            <input  type='checkbox' id='CSL9' name='CSL9' value="1"/>
+            <label for="CSL9">Vitamin D</label> <br>
+            <input  type='checkbox' id='CSL10' name='CSL10' value="1"/>
+            <label for="CSL10">Calcium</label> <br>
+            <input  type='checkbox' id='CSL11' name='CSL11' value="1"/>
+            <label for="CSL11">Iron</label> <br>
+            <input  type='checkbox' id='CSL12' name='CSL12' value="1"/>
+            <label for="CSL12">Potassium</label> <br>
+          </div>
+          
+      </div> 
+      
+
+    </div>
+    </div>
+  </body>
+</html>

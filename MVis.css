@@ -1,0 +1,420 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 20px;
+  border-radius: 10px;
+  outline: 1px solid rgb(70, 70, 70);
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.Main_Frame {
+  width: 800px;
+  height: 3900px;
+  background: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.magazine {
+  width: 100%;
+  height: 100%;
+  background: url("../images/v813_310.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 60px;
+  left: 263px;
+  overflow: hidden;
+}
+
+.magazine2 {
+  width: 443px;
+  height: 6000px;
+  position: absolute;
+  top: 900px;
+  left: 0px;
+}
+
+.AMS_Text {
+  width: 159px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 530px;
+  left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+
+.Big_Title {
+  width: 300;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 10px;
+  font-family: Times New Roman;
+  font-weight: Bold;
+  font-size: 28px;
+  opacity: 1;
+  text-align: left;
+}
+
+.Smaller_Title {
+  width: 300;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 10px;
+  font-family: Times New Roman;
+  font-size: 14px;
+  opacity: 1;
+  text-align: left;
+}
+
+.nutrition_facts {
+  width: 455px;
+  height: 100%;
+  top: 745px;
+  position: absolute;
+}
+
+.Calorie_Text {
+  width: 123px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 560px;
+  left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 28px;
+  opacity: 1;
+  text-align: left;
+}
+
+.Calorie_Amount {
+  width: 51px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 560px;
+  left: 394px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 28px;
+  opacity: 1;
+  text-align: left;
+}
+
+.servings {
+  width: 213px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: left;
+}
+
+.line {
+  width: 440px;
+  left: 0px;
+  border: 0.5px solid #dfdfdf;
+  position: absolute;
+}
+/* Servings Per Container Placement */
+.Serving_Per_Container {
+  width: 213px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 105px;
+  left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 18px;
+  opacity: 1;
+  text-align: left;
+}
+
+/* Servings Size Text Placement */
+.Serving_Size {
+  width: 131px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 160px;
+  left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Servings Size Text Placement */
+.Serving_Size_Title {
+  width: 131px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  font-family: Times New Roman;
+  font-weight: Bold;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+
+/* Servings Amount Text Placement */
+.Serving_Amount {
+  width: 205px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 167px;
+  left: 260px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+
+.calories {
+  width: 159px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 100px;
+  left: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.dv_box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+  top: 228px;
+  position: absolute;
+}
+.dv_text {
+  width: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  left: 20px;
+  top: -17px;
+  position: absolute;
+}
+.dv {
+  width: 200px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 194px;
+  left: 255px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 12px;
+  opacity: 1;
+  text-align: left;
+}
+.nutrients {
+  width: "100%";
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 14px;
+  opacity: 1;
+  text-align: left;
+}
+.percents {
+  height: 22px;
+  background-color: rgb(35, 110, 190);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border-right: 1px solid black;
+}
+.percent_box {
+  width: 230px;
+  height: 24px;
+  background-color: #e8e8e8;
+  border: 1px solid black;
+  left: 208px;
+  position: absolute;
+}
+.dv_utilized {
+  top: -8px;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+}
+.dv_left {
+  top: -8px;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  color: black;
+}
+.vertical {
+  top: 256px;
+  position: absolute;
+  height: 18px;
+  border-left: 2px solid black;
+}
+.num {
+  top: -20px;
+  left: -4px;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 9px;
+  color: black;
+}
+.text_box {
+  width: 100%;
+  height: 100%;
+}
+
+.text_info {
+  width: 1000;
+  left: 0px;
+  position: absolute;
+  color: rgba(0, 0, 0, 1);
+  font-family: Times New Roman;
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: center;
+}
+.nutrient_block {
+  background-color: #fed09d;
+  width: 200px;
+  height: 564px;
+  top: 282px;
+  left: 0px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+
+.serving_block {
+  background-color: #acf3f8;
+  width: 440px;
+  height: 89px;
+  top: 19px;
+  left: 0px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+
+.calorie_block {
+  background-color: #fec5fe;
+  width: 440px;
+  height: 91px;
+  top: 112px;
+  left: 0px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+
+.pvd_block {
+  background-color: #debaff;
+  width: 248px;
+  height: 640px;
+  top: 206px;
+  left: 200px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+.df_block {
+  background-color: greenyellow;
+  width: 440px;
+  height: 40px;
+  top: 2564px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+.df_block2 {
+  background-color: red;
+  width: 440px;
+  height: 40px;
+  top: 2549px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+
+.circle_thing {
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.Number_Text_Main {
+  width: 30px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  font-family: Times New Roman;
+  font-weight: Bold;
+  font-size: 23px;
+  opacity: 1;
+  text-align: center;
+}
+
+.Text_Titles_Main {
+  width: 170px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  font-family: Times New Roman;
+  font-weight: Bold;
+  font-size: 23px;
+  opacity: 1;
+  text-align: left;
+}
+
+.v901_572 {
+  width: 30px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 288px;
+  left: 52px;
+  font-family: Times New Roman;
+  font-weight: Bold;
+  font-size: 20px;
+  opacity: 1;
+  text-align: center;
+}

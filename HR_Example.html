@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="main.css" rel="stylesheet" />
+    <style>
+      .slides {
+        display: none;
+      }
+    </style>
+    <title>HEALTHRATE</title>
+  </head>
+  <body>
+    <div class="slides">
+      <iframe
+        src="potpie_healthrate/index.html"
+        class="healthrate_format"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+      <div
+        class="questions"
+        style="left: 970px; top: 270px; height: 300px; width: 400px"
+      >
+        <!--<p class = "balanced_diet_format">
+        Enter Answer Here:
+        </p>-->
+      </div>
+      <div class="input_box" style="top: 260px; left: 900px">
+        <label for="HR_PPInitial" style="top: -30px; position: absolute"
+          ><b>Select One:</b></label
+        >
+        <select name="HR_PPInitial" id="HR_PPInitial" class="w3-select">
+          <option value="">----</option>
+          <option value="1"><strong>1: Not Healthy</strong></option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10"><strong>10: Very Healthy</strong></option>
+        </select>
+        <button
+          class="next"
+          type="button"
+          style="
+            width: 200px;
+            height: 100%;
+            top: 180px;
+            left: -40px;
+            position: absolute;
+            text-align: center;
+          "
+          onclick="plusDivs(1)"
+        >
+          Click here to see the next part of the task.
+        </button>
+      </div>
+    </div>
+
+    <div class="slides">
+      <iframe
+        src="PPText-C.html"
+        class="control"
+        frameborder="0"
+        scrolling="no"
+        onmouseout="getOutC()"
+        onmouseenter="getIn()"
+      ></iframe>
+      <div
+        class="viz_instructions"
+        style="
+          left: 995px;
+          top: 175px;
+          height: 300px;
+          width: 350px;
+          text-align: center;
+        "
+      >
+        <i
+          >Answer the following question based on the nutrition label and
+          narrative.
+        </i>
+      </div>
+
+      <div
+        class="questions"
+        style="left: 1025px; top: 300px; height: 300px; width: 350px"
+      >
+        <p class="balanced_diet_format">
+          Rank the food product on the scale 1-10:
+        </p>
+
+        <div class="input_box" style="top: 100px; left: 80px">
+          <label for="HR_PPAfter" style="top: -20px; position: absolute"
+            ><b>Select One:</b></label
+          >
+          <select name="HR_PPAfter" id="HR_PPAfter" class="w3-select">
+            <option value="">----</option>
+            <option value="1"><strong>1: Not Healthy</strong></option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10"><strong>10: Very Healthy</strong></option>
+          </select>
+          <button
+            class="next"
+            type="button"
+            style="
+              width: 200px;
+              height: 100%;
+              top: 80px;
+              left: -40px;
+              position: absolute;
+              text-align: center;
+            "
+            onclick="plusDivs(1)"
+          >
+            Click here to see the first part of the task.
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs((slideIndex += n));
+      }
+
+      function currentDiv(n) {
+        showDivs((slideIndex = n));
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("slides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-red", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-red";
+      }
+    </script>
+  </body>
+</html>

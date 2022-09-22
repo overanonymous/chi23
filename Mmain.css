@@ -1,0 +1,813 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 20px;
+  border-radius: 10px;
+  outline: 1px solid rgb(70, 70, 70);
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.Main_Frame {
+  width: 800px;
+  height: 3900px;
+  background: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.text_box {
+  width: 100%;
+  height: 100%;
+}
+
+.text_info {
+  width: 1000;
+  left: 0px;
+  position: absolute;
+  color: rgba(0, 0, 0, 1);
+  font-family: Times New Roman;
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: center;
+}
+
+.Big_Title {
+  width: 300;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 10px;
+  font-family: Times New Roman;
+  font-weight: Bold;
+  font-size: 28px;
+  opacity: 1;
+  text-align: left;
+}
+
+.Smaller_Title {
+  width: 300;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 10px;
+  font-family: Times New Roman;
+  font-size: 14px;
+  opacity: 1;
+  text-align: left;
+}
+
+.v2_106 {
+  width: 213px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 18px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_107 {
+  width: 131px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 58px;
+  left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_108 {
+  width: 205px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 65px;
+  left: 235px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+
+.v2_128 {
+  width: 159px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 110px;
+  left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+
+.v2_129 {
+  width: 123px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 148px;
+  left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 28px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_130 {
+  width: 51px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 148px;
+  left: 385px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 28px;
+  opacity: 1;
+  text-align: left;
+}
+
+.v2_131 {
+  width: 122px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 327px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_132 {
+  width: 127px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 260px;
+  left: 5px;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_133 {
+  width: 129px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 302px;
+  left: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_134 {
+  width: 100px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 343px;
+  left: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_135 {
+  width: 147px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 387px;
+  left: 5px;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_136 {
+  width: 124px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 429px;
+  left: 5px;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_137 {
+  width: 217px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 472px;
+  left: 5px;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_138 {
+  width: 131px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 514px;
+  left: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_139 {
+  width: 111px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 638px;
+  left: 5px;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_140 {
+  width: 218px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 599px;
+  left: 38px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_141 {
+  width: 218px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 556px;
+  left: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_142 {
+  width: 117px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 685px;
+  left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_143 {
+  width: 142px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 725px;
+  left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_144 {
+  width: 132px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 767px;
+  left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_145 {
+  width: 132px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 810px;
+  left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+
+.v2_146 {
+  width: 39px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 260px;
+  left: 402px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_147 {
+  width: 39px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 302px;
+  left: 402px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_148 {
+  width: 29px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 387px;
+  left: 409px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_149 {
+  width: 39px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 429px;
+  left: 409px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_150 {
+  width: 39px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 472px;
+  left: 402px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_151 {
+  width: 39px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 514px;
+  left: 409px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_152 {
+  width: 29px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 600px;
+  left: 402px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_153 {
+  width: 39px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 636px;
+  left: 402px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_154 {
+  width: 27px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 685px;
+  left: 409px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_155 {
+  width: 27px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 726px;
+  left: 409px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_156 {
+  width: 37px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 768px;
+  left: 409px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.v2_157 {
+  width: 27px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 811px;
+  left: 409px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+
+.Footnote_Text {
+  width: 425px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 870px;
+  left: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+
+.magazine {
+  width: 100%;
+  height: 100%;
+  background: url("../images/v813_310.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 60px;
+  left: 263px;
+  overflow: hidden;
+}
+
+.magazine2 {
+  width: 443px;
+  height: 6000px;
+  position: absolute;
+  top: 900px;
+  left: 0px;
+}
+
+.line {
+  width: 440px;
+  left: 0px;
+  border: 0.5px solid #dfdfdf;
+  position: absolute;
+}
+
+/* Servings Per Container Placement */
+.Serving_Per_Container {
+  width: 213px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 18px;
+  opacity: 1;
+  text-align: left;
+}
+
+/* Servings Size Text Placement */
+.Serving_Size {
+  width: 131px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+
+/* Servings Amount Text Placement */
+.Serving_Amount {
+  width: 205px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 66px;
+  left: 255px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+
+.serving {
+  width: 420px;
+  color: black;
+  position: absolute;
+}
+
+.serving_info {
+  width: 420px;
+  left: 20px;
+  position: relative;
+  color: rgba(0, 0, 0, 1);
+  font-family: Times New Roman;
+  font-weight: Regular;
+  font-size: 19px;
+  text-align: center;
+}
+.AMS_Text {
+  width: 159px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 280px;
+  left: 10px;
+  font-family: Times New Roman;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.Calorie_Text {
+  width: 123px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 310px;
+  left: 10px;
+  font-family: Times New Roman;
+  font-weight: Bold;
+  font-size: 28px;
+  opacity: 1;
+  text-align: left;
+}
+
+.Calorie_Amount {
+  width: 51px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 310px;
+  left: 394px;
+  font-family: Times New Roman;
+  font-weight: Bold;
+  font-size: 28px;
+  opacity: 1;
+  text-align: left;
+}
+.calorie {
+  width: 420px;
+  color: black;
+  position: absolute;
+  top: 373px;
+}
+.calorie_info {
+  width: 420px;
+  left: 20px;
+  position: relative;
+  color: rgba(0, 0, 0, 1);
+  font-family: Times New Roman;
+  font-weight: Regular;
+  font-size: 19px;
+  text-align: center;
+}
+.daily_value1 {
+  width: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 2px;
+  left: 330px;
+  font-family: Times New Roman;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.nutrition_facts {
+  width: 455px;
+  height: 100%;
+  top: 800px;
+  position: absolute;
+}
+
+.nutrients {
+  width: "100%";
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+
+.percents {
+  width: 39px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 402px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+
+.percents2 {
+  width: 39px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 402px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+
+.nutrient {
+  width: 420px;
+  color: black;
+  position: absolute;
+  top: 1135px;
+}
+.nutrient_info {
+  width: 420px;
+  left: 20px;
+  position: relative;
+  color: rgba(0, 0, 0, 1);
+  font-family: Times New Roman;
+  font-weight: Regular;
+  font-size: 19px;
+  text-align: center;
+}
+
+.pvd {
+  width: 420px;
+  color: black;
+  position: absolute;
+  top: 1900px;
+}
+.pvd_info {
+  width: 420px;
+  left: 20px;
+  position: relative;
+  color: rgba(0, 0, 0, 1);
+  font-family: Times New Roman;
+  font-weight: Regular;
+  font-size: 19px;
+  text-align: center;
+}
+.benefit {
+  width: 420px;
+  color: black;
+  position: absolute;
+  top: 2884px;
+}
+.benefit_info {
+  width: 420px;
+  left: 20px;
+  position: relative;
+  color: rgba(0, 0, 0, 1);
+  font-family: Times New Roman;
+  font-weight: Regular;
+  font-size: 19px;
+  text-align: center;
+}
+
+.df_block {
+  background-color: greenyellow;
+  width: 440px;
+  height: 40px;
+  top: 2564px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+.df_block2 {
+  background-color: red;
+  width: 440px;
+  height: 40px;
+  top: 2549px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+
+.nutrient_block {
+  background-color: #fed09d;
+  width: 250px;
+  height: 640px;
+  top: 220px;
+  left: 0px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+
+.serving_block {
+  background-color: #acf3f8;
+  width: 440px;
+  height: 89px;
+  top: 19px;
+  left: 0px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+
+.calorie_block {
+  background-color: #fec5fe;
+  width: 440px;
+  height: 105px;
+  top: 115px;
+  left: 0px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+
+.pvd_block {
+  background-color: #debaff;
+  width: 190px;
+  height: 640px;
+  top: 220px;
+  left: 250px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+
+.circle_thing {
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.Number_Text_Main {
+  width: 30px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  font-family: Times New Roman;
+  font-weight: Bold;
+  font-size: 23px;
+  opacity: 1;
+  text-align: center;
+}
+
+.Text_Titles_Main {
+  width: 170px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  font-family: Times New Roman;
+  font-weight: Bold;
+  font-size: 23px;
+  opacity: 1;
+  text-align: left;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="main.css" rel="stylesheet" />
+    <title>DIETMATH</title>
+  </head>
+  <body>
+    <div class="slides">
+      <iframe
+        src="MCText-C.html"
+        class="control"
+        frameborder="0"
+        scrolling="no"
+        onmouseout="getOutC()"
+        onmouseenter="getIn()"
+      ></iframe>
+      <div
+        class="viz_instructions"
+        style="
+          left: 995px;
+          top: 175px;
+          height: 300px;
+          width: 350px;
+          text-align: center;
+        "
+      >
+        <i
+          >Answer the following question based on the nutrition label and
+          narrative.
+        </i>
+      </div>
+      <div
+        class="questions"
+        style="left: 980px; top: 280px; height: 300px; width: 370px"
+      >
+        <p class="balanced_diet_format" style="font-weight: normal">
+          How many servings of this food <i>could</i> you eat without surpassing
+          the recommended daily value for <b>protein?</b>
+        </p>
+        <p class="balanced_diet_format">
+          <i>Enter Numerical Value</i>
+        </p>
+      </div>
+      <div class="input_box" style="left: 980px; top: 400px">
+        <input class="input" name="BD_MC" id="BD_MC" type="number" required />
+      </div>
+    </div>
+  </body>
+</html>

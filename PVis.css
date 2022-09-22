@@ -1,0 +1,372 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+
+.line {
+  width: 440px;
+  left: 0px;
+  border: 0.5px solid #dfdfdf;
+  position: absolute;
+}
+.servings {
+  width: 213px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 6px;
+  left: 8px;
+
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: left;
+}
+.calories {
+  width: 159px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 100px;
+  left: 8px;
+
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.nutrition_facts {
+  width: 455px;
+  height: 940px;
+  top: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  left: 355px;
+  position: absolute;
+}
+.dv {
+  width: 122px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 202px;
+  left: 334px;
+
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.nutrients {
+  width: "100%";
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 18px;
+
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.percents {
+  width: 39px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 401px;
+
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  text-align: right;
+}
+.percents2 {
+  width: 39px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 401px;
+
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: right;
+}
+.footnote {
+  width: 450px;
+  top: 804px;
+  left: 5px;
+  position: absolute;
+
+  font-style: Regular;
+  font-size: 16px;
+}
+
+.serving {
+  width: 330px;
+  height: 280px;
+  top: 31px;
+  left: 10px;
+  position: absolute;
+}
+.serving_title {
+  color: black;
+  font-family: Times New Roman;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.serving_info {
+  width: 330px;
+  top: 31px;
+  position: absolute;
+  color: rgba(0, 0, 0, 1);
+  font-family: Times New Roman;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+.serving_block {
+  background-color: #acf3f8;
+  width: 440px;
+  height: 88px;
+  top: -9px;
+  left: 345px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+  display: none;
+}
+
+.serving_info:hover + .serving_block {
+  display: block;
+}
+
+.calorie {
+  width: 330px;
+  height: 280px;
+  top: 117px;
+  left: 815px;
+  position: absolute;
+}
+
+.calorie_title {
+  width: 226px;
+  color: black;
+  font-family: Times New Roman;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.calorie_info {
+  width: 330px;
+  color: rgba(0, 0, 0, 1);
+  top: 31px;
+  position: absolute;
+  font-family: Times New Roman;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+.calorie_block {
+  background-color: #fec5fe;
+  width: 440px;
+  height: 90px;
+  top: 0px;
+  right: 350px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+  display: none;
+}
+.calorie_info:hover + .calorie_block {
+  display: block;
+}
+.percent_daily {
+  width: 330px;
+  height: 240px;
+  top: 350px;
+  left: 10px;
+  position: absolute;
+}
+.pdv_title {
+  width: 226px;
+  color: black;
+  font-family: Times New Roman;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.pdv_info {
+  width: 330px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 31px;
+  font-family: Times New Roman;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+.pdv_block {
+  background-color: #debaff;
+  width: 240px;
+  height: 637px;
+  top: -140px;
+  left: 546px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+  display: none;
+}
+.pdv_info:hover + .pdv_block {
+  display: block;
+}
+.less_more {
+  width: 330px;
+  height: 580px;
+  top: 450px;
+  left: 815px;
+  position: absolute;
+}
+.nutrient_title {
+  width: 226px;
+  color: black;
+  font-family: Times New Roman;
+  font-weight: bold;
+  font-size: 22px;
+}
+.nutr_info {
+  width: 340px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 31px;
+  font-family: Times New Roman;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+.df_green_block {
+  background-color: greenyellow;
+  width: 440px;
+  height: 43px;
+  right: 350px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+  display: none;
+}
+
+.df_red_block {
+  background-color: red;
+  width: 440px;
+  height: 43px;
+  top: 500px;
+  right: 350px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+  display: none;
+}
+
+.nutr_info:hover ~ .df_green_block {
+  display: block;
+}
+
+.nutr_info:hover ~ .df_red_block {
+  display: block;
+}
+
+.footnote {
+  width: 450px;
+  top: 804px;
+  left: 5px;
+  position: absolute;
+  font-style: Regular;
+  font-size: 16px;
+}
+.dv_box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+  top: 228px;
+  position: absolute;
+}
+.dv_text {
+  width: 100px;
+  font-family: Times New Roman;
+  font-weight: bold;
+  left: 20px;
+  top: -16px;
+  position: absolute;
+}
+.dv {
+  width: 200px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 198px;
+  left: 255px;
+
+  font-weight: Bold;
+  font-size: 12px;
+  opacity: 1;
+  text-align: left;
+}
+.nutrients {
+  width: "100%";
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 5px;
+
+  font-weight: Regular;
+  font-size: 14px;
+  opacity: 1;
+  text-align: left;
+}
+.percents {
+  height: 22px;
+  background-color: rgb(35, 110, 190);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border-right: 1px solid black;
+}
+.percent_box {
+  width: 230px;
+  height: 24px;
+  background-color: #e8e8e8;
+  border: 1px solid black;
+  left: 208px;
+  position: absolute;
+}
+.dv_utilized {
+  top: -8px;
+  position: absolute;
+
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+}
+.dv_left {
+  top: -8px;
+  position: absolute;
+
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  color: black;
+}
+.vertical {
+  top: 256px;
+  position: absolute;
+  height: 18px;
+  border-left: 2px solid black;
+}
+.num {
+  top: -20px;
+  left: -4px;
+  position: absolute;
+
+  font-weight: bold;
+  font-size: 9px;
+  color: black;
+}

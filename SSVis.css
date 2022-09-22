@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.line {
+  width: 440px;
+  left: 0px;
+  border: 0.5px solid #dfdfdf;
+  position: absolute;
+}
+.servings {
+  width: 213px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 6px;
+  left: 8px;
+
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: left;
+}
+.calories {
+  width: 159px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 100px;
+  left: 8px;
+
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.nutrition_facts {
+  width: 455px;
+  height: 940px;
+  top: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  left: 10px;
+  position: absolute;
+}
+
+.nutrients {
+  width: "100%";
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 18px;
+
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+
+.percents2 {
+  width: 39px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 401px;
+
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: right;
+}
+.footnote {
+  width: 450px;
+  top: 804px;
+  left: 5px;
+  position: absolute;
+
+  font-style: Regular;
+  font-size: 16px;
+}
+.text {
+  width: 450px;
+  height: 378px;
+  left: 470px;
+  top: 250px;
+  position: absolute;
+}
+h1 {
+  text-align: center;
+}
+.text_info {
+  width: 450px;
+  top: 0px;
+  text-indent: 10px;
+  position: relative;
+  color: rgba(0, 0, 0, 1);
+  font-family: Times New Roman;
+  font-weight: Regular;
+  font-size: 19px;
+  text-align: left;
+}
+
+.w3-center {
+  width: 300px;
+  top: 600px;
+  left: 540px;
+  position: absolute;
+  text-align: center;
+}
+.w3-button {
+  border: 1px solid #e7e7e7;
+  margin-bottom: 2px;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.w3-light-grey,
+.w3-hover-light-grey:hover {
+  color: #000 !important;
+  background-color: #e7e7e7 !important;
+}
+.demo {
+  padding: 0px 0px;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+}
+.w3-red,
+.w3-hover-red:hover {
+  color: #fff !important;
+  background-color: #f44336 !important;
+}
+.serving_block {
+  background-color: #acf3f8;
+  width: 440px;
+  height: 84px;
+  top: 24px;
+  left: 10px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+
+.calorie_block {
+  background-color: #fec5fe;
+  width: 440px;
+  height: 91px;
+  top: 116px;
+  left: 10px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+.pdv_block {
+  background-color: #debaff;
+  width: 240px;
+  height: 637px;
+  top: 210px;
+  left: 212px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+.goodnutr_block {
+  background-color: greenyellow;
+  width: 440px;
+  height: 40px;
+  left: 10px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+.badnutr_block {
+  background-color: red;
+  width: 440px;
+  height: 40px;
+  left: 10px;
+  position: absolute;
+  padding: 20px;
+  opacity: 0.4;
+}
+.dv_box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+  top: 228px;
+  position: absolute;
+}
+.dv_text {
+  width: 100px;
+  font-family: Times New Roman;
+  font-weight: bold;
+  left: 20px;
+  top: -16px;
+  position: absolute;
+}
+.dv {
+  width: 200px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 198px;
+  left: 255px;
+
+  font-weight: Bold;
+  font-size: 12px;
+  opacity: 1;
+  text-align: left;
+}
+.nutrients {
+  width: "100%";
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 5px;
+
+  font-weight: Regular;
+  font-size: 14px;
+  opacity: 1;
+  text-align: left;
+}
+.percents {
+  height: 22px;
+  background-color: rgb(35, 110, 190);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border-right: 1px solid black;
+}
+.percent_box {
+  width: 230px;
+  height: 24px;
+  background-color: #e8e8e8;
+  border: 1px solid black;
+  left: 208px;
+  position: absolute;
+}
+.dv_utilized {
+  top: -8px;
+  position: absolute;
+
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+}
+.dv_left {
+  top: -8px;
+  position: absolute;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  color: black;
+}
+.vertical {
+  top: 256px;
+  position: absolute;
+  height: 18px;
+  border-left: 2px solid black;
+}
+.num {
+  top: -20px;
+  left: -4px;
+  position: absolute;
+
+  font-weight: bold;
+  font-size: 9px;
+  color: black;
+}
